@@ -1,0 +1,231 @@
+
+*
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* font-weight: lighter; */
+}
+
+.navbar .active
+{
+    font-weight: bold;
+}
+
+.header
+{
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    border: aquamarine solid 5px;
+}
+
+.container
+{   margin: auto;
+    width: 80%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.header .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar
+{
+    
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+.header h1 
+{
+    color: aquamarine;
+}
+
+.navbar li
+{
+    font-weight: lighter;
+    color: goldenrod;
+}
+
+.navbar li a 
+{
+    color: goldenrod;
+    text-decoration: none;
+}
+
+.navbar li :hover{
+    color: red;
+}
+
+
+.banner{
+    height: 450px;
+    background-image: url('https://images7.alphacoders.com/772/772110.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message{
+    margin-right: 250px;
+    width: 15%;
+    font-size: 30px;
+    color: white;
+
+}
+
+.message span{
+    font-weight: bolder;
+}
+
+.proposito{
+    height: 450px;
+  background-color: #E5E5E5;
+
+}
+
+.proposito .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.proposito .container h2{
+    color: rgb(105, 5, 5);
+    padding: 25PX;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.proposito .container .mvv div img{
+
+    height: 100px;
+    width: 100px;
+   
+
+}
+
+.proposito .container .mvv {
+    width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    
+}
+
+.proposito .container .mvv div{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+}
+
+.proposito .container .mvv div h3{
+    color: rgb(105, 5, 5);
+    font-weight: bolder;
+    margin: 25px 0;
+}
+
+.footer{
+    background-color: teal;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.footer p{
+    color: white;
+}
+
+.formLogin{
+    background-color: white;
+    height: 350px ;
+    width: 30% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.formLogin h2{
+    color: red;
+    
+}
+
+.formLogin span{
+    color: red;
+}
+
+.formLogin div{
+    display: flex;
+    flex-direction: column;
+}
+
+.formLogin input{
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.formLogin button{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.formCadastro{
+    background-color: white;
+    height: 350px ;
+    width: 30% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+
+}
+
+.formCadastro button{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.formCadastro input{
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.formCadastro h2{
+    color: red;
+    
+}
+
+.formCadastro span{
+    color: red;
+}
+
+.formCadastro div{
+    display: flex;
+    flex-direction: column;
+}
