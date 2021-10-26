@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Da acesso a lib -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+
+  <div class="header">
+    <div class="container">
+      <h1>Projeto <span class="highlight">IOT</span> Revolucionário</h1>
+    </div>
+  </div>
+
+  <div class="dash-container">
+    <!-- Farol de temperatura -->
+    <!-- <div class="graph">
+      <div class="box red">
+        <h1>00°</h1>
+        <h3>STATUS</h3>
+        <p>Descrição do status</p>
+      </div>
+      <div class="box yellow">
+        <h1>00°</h1>
+        <h3>STATUS</h3>
+        <p>Descrição do status</p>
+      </div>
+      <div class="box green">
+        <h1>00°</h1>
+        <h3>STATUS</h3>
+        <p>Descrição do status</p>
+      </div>
+    </div> -->
+
+    <!-- Gráfico de Linhas -->
+    <div class="graph">
+      <canvas id="chartline" style="width: 100%; height: 100%;"></canvas>
+    </div>
+
+    <!-- Gráfico de Barras -->
+    <div class="graph">
+      <canvas id="chartbar" style="width: 100%; height: 100%;"></canvas>
+    </div>
+
+
+    <!-- Grafico Pizza -->
+    <div class="graph">
+      <canvas id="chartpie" style="width: 100px; height: 100px;"></canvas>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+  var ctx = document.getElementById('chartline').getContext('2d');
+
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Norte', 'Nordeste', 'Sul', 'Suldeste', 'Centro-oeste'],
+      datasets: [{
+        label: '# Media salarial por região',
+        data: [1711, 1539, 2585, 2499, 2498],
+        backgroundColor: [
+
+          '#FF000022',
+          '#00640022',
+          '#FO116022',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          
+          
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+
+        ],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: false,
+        }
+      }
+    }
+  });
+
+
+  var ctx = document.getElementById('chartbar').getContext('2d');
+
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2011', '2012', '2013', '2014', '2015', '2016','2017','2018','2019','2020','2021'],
+      datasets: [{
+        label: 'Salario minimo ',
+        data: [540, 622, 678, 724, 788, 880,937,954,998,1045,1100],
+        backgroundColor: [
+
+          '#FF000022',
+          '#00640022',
+          '#FO116022',
+          'rgba(100, 192, 192, 0.2)',
+          'rgba(10, 102, 255, 0.2)',
+          'rgba(28, 159, 64, 0.2)',
+          'rgba(99, 192, 192, 0.2)',
+          'rgba(100, 102, 255, 0.2)',
+          'rgba(65, 159, 64, 0.2)',
+          'rgba(8, 192, 192, 0.2)',
+          'rgba(200, 102, 255, 0.2)',
+          
+          
+        ],
+        borderColor: [
+          'rgba(111, 99, 132, 1)',
+          'rgba(223, 162, 235, 1)',
+          'rgba(100, 206, 86, 1)',
+          'rgba(90, 192, 192, 1)',
+          'rgba(200, 102, 255, 1)',
+          'rgba(9, 159, 64, 1)',
+          'rgba(98, 192, 192, 0.2)',
+          'rgba(16, 102, 255, 0.2)',
+          'rgba(10, 159, 64, 0.2)',
+          'rgba(5, 192, 192, 0.2)',
+          'rgba(1, 102, 255, 0.2)',
+          
+        ],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        }
+      }
+    }
+  });
+
+  var ctx = document.getElementById('chartpie').getContext('2d');
+
+  var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Brasil(total)', 'Norte', 'Nordeste','Sudeste','Sul','Centro-Oeste'],
+      datasets: [{
+        label: 'Desemprego por região ',
+        data: [11,10.6, 13.6,11.4,6.8,9.3],
+        backgroundColor: [
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)',
+          'rgba(100, 90, 64, 0.2)',
+          'rgba(80, 200, 200, 0.2)',
+          'rgba(167, 1, 64, 0.2)',
+
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(1, 10, 64, 0.2)',
+          'rgba(255, 200, 200, 0.2)',
+          'rgba(200, 1, 64, 0.2)',
+
+        ],
+        borderWidth: 2
+      }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+        }
+      }
+    }
+  });
+</script>
